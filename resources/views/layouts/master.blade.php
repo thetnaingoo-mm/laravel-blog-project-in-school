@@ -17,15 +17,25 @@
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
 </head>
 <body>
-    <div id="app" class=" min-vh-100 d-flex flex-column">
+    <div id="app" class="min-vh-100 d-flex flex-column">
 
         @include('layouts.nav')
 
+
             <main class="py-4">
-                @yield('content')
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8">
+                            @yield('content')
+                        </div>
+                        <div class="col-lg-4">
+                            @include('layouts.right-sidebar')
+                        </div>
+                    </div>
+                </div>
             </main>
 
-            <footer class=" bg-black text-center py-5 mt-auto">
+            <footer class=" bg-black text-center py-5 mt-auto" >
                 <p class="mb-0 text-white">Footer</p>
             </footer>
     </div>

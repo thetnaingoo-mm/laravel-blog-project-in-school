@@ -12,9 +12,14 @@
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
                         </div>
+
                     @endif
 
                     {{ __('You are logged in!') }}
+                    <i class=" bi bi-person"></i>
+                    <div class="alert alert-danger">
+                        {{Auth::user()}}
+                    </div>
                 </div>
             </div>
         </div>

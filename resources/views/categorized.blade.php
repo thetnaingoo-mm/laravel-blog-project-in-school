@@ -1,9 +1,17 @@
 @extends('layouts.master')
 
+
 @section('content')
-    @if (request()->has('q'))
+    @if (request()->has('q') &&  $category->title)
         <div class=" d-flex justify-content-between">
-            <p class=" mb-2 fw-bold">Search Result by ' {{ request()->q }} '</p>
+            <p class=" mb-2 fw-bold">
+                Search Result by ' {{ request()->q }} and {{$category->title}} category '
+            </p>
+            <a href="{{ route('index') }}" class=" text-dark">See All</a>
+        </div>
+    @elseif($category->title)
+        <div class=" d-flex justify-content-between">
+            <p class=" mb-2 fw-bold">Show Result by ' {{ $category->title }} category '</p>
             <a href="{{ route('index') }}" class=" text-dark">See All</a>
         </div>
     @endif
