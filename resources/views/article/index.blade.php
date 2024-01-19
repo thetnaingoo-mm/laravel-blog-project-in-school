@@ -72,7 +72,7 @@
                                     <form id="articleDeleteFrom{{$article->id}}" class=" d-inline" action="{{ route('article.destroy',$article->id) }}" method="post">
                                         @method('delete')
                                         @csrf
-                                </form>
+                                    </form>
                                 </td>
                                 <td>
                                     <p class=" small mb-0">
