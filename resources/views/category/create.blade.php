@@ -1,10 +1,14 @@
-@extends('layouts.app')
+@extends('page.master')
+
+@section('title')
+    Category Create
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3>Create Category </h3>
+                <h4>Create Category </h4>
                 <form action="{{route('category.store')}}" method="post">
                     @csrf
                     <div class=" mb-3">

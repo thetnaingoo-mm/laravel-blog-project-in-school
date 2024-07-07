@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('page.master')
+
+@section('title')
+    Article Detail
+@endsection
 
 @section('content')
     <div class="container">

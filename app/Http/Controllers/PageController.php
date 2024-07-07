@@ -34,7 +34,7 @@ class PageController extends Controller
     public function show($slug)
     {
         $article = Article::where('slug',$slug)->firstOrFail();
-        return view('detail',compact('article'));
+        return view('det ail',compact('article'));
     }
 
     public function categorized($slug)

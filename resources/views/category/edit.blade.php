@@ -1,10 +1,14 @@
-@extends('layouts.app')
+@extends('page.master')
+
+@section('title')
+    Category Edit
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3>Update Category </h3>
+                <h4>Update Category </h4>
                 <form action="{{route('category.update',$category->id)}}" method="post">
                     @csrf
                     @method('put')

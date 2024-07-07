@@ -37,7 +37,11 @@ class CategoryController extends Controller
     public function store(StoreCategoryRequest $request)
     {
         // $this->authorize('create',Category::class);
-
+        // $category = new Category();
+        // $category->title = $request->title;
+        // $category->slug = Str::slug($request->title);
+        // $category->id = Auth::id();
+        // $category->save();
         $category = Category::create([
             'title' => $request->title,
             'slug' => Str::slug($request->title),

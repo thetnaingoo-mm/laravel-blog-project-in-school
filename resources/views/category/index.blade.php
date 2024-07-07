@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('page.master')
+
+@section('title')
+    Category Lists
+@endsection
 
 @section('content')
     <div class="container">
@@ -10,10 +14,10 @@
                     </div>
                 @endif
                 <div class="">
-                    <a href="{{ route('category.create') }}" class=" btn btn-dark">Category Create</a>
+                    <a href="{{ route('category.create') }}" class=" btn btn-primary mb-3">Category Create</a>
                 </div>
                 <div class=" d-flex justify-content-between">
-                    <h1>Category Lists</h1>
+                    <h4>Category Lists</h4>
                     <form action="{{ route('category.index') }}">
 
                         <div class=" input-group">
@@ -23,6 +27,7 @@
                         </div>
                     </form>
                 </div>
+
                 <table class=" table">
                     <thead>
                         <tr>

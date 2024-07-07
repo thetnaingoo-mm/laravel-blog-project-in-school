@@ -1,4 +1,8 @@
-@extends('layouts.app')
+@extends('page.master')
+
+@section('title')
+    Article Lists
+@endsection
 
 @section('content')
     <div class="container">
@@ -10,10 +14,10 @@
                     </div>
                 @endif
                 <div class="">
-                    <a href="{{route('article.create')}}" class=" btn btn-dark">Article Create</a>
+                    <a href="{{route('article.create')}}" class=" btn btn-primary mb-3">Article Create</a>
                 </div>
                 <div class=" d-flex justify-content-between">
-                    <h1>Article Lists</h1>
+                    <h4>Article Lists</h4>
                     <form action="{{route('article.index')}}" >
 
                         <div class=" input-group">

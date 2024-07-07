@@ -31,10 +31,10 @@ Route::controller(PageController::class)->group(function () {
     Route::get('/article-detail/{slug}','show')->name('detail');
     Route::get('category/{slug}','categorized')->name('categorized');
 });
-
 Route::resource('comment', CommentController::class)->only(['store','update','destroy'])->middleware('auth');
 
 Route::middleware(['auth'])->prefix('dashboard')->group( function () {
+    
     Route::resource('article',ArticleController::class);
     Route::resource('category',CategoryController::class)->middleware('can:viewAny,'.Category::class);
     Route::get('/home', [HomeController::class, 'index'])->name('home');

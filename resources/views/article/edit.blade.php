@@ -1,10 +1,14 @@
-@extends('layouts.app')
+@extends('page.master')
+
+@section('title')
+Article Edit
+@endsection
 
 @section('content')
     <div class="container">
         <div class="row">
             <div class="col-12">
-                <h3>Update Article </h3>
+                <h4>Update Article </h4>
                 <form action="{{route('article.update',$article->id)}}" method="post">
                     @csrf
                     @method('put')
